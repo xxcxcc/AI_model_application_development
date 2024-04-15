@@ -43,6 +43,9 @@ if show_login_form:
         if username in user_dict and password == user_dict[username]:
             # 登录成功，更新session状态
             st.session_state.is_logged_in = True
+            st.success("用户验证成功，请再点击一次登录键！")
+            st.success("在左侧菜单栏选择您需要访问的程序。")
+
         else:
             # 登录失败，显示警告消息
             st.warning("用户名或密码错误，请重试。")
